@@ -1,3 +1,22 @@
+# Clone repo without forking
+
+1. Open Terminal.
+2. Create a bare clone of the repository.
+```sh
+$ git clone --bare https://github.com/exampleuser/old-repository.git
+```
+
+3. Mirror-push to the new repository.
+```sh
+$ cd old-repository
+$ git push --mirror https://github.com/exampleuser/new-repository.git
+```
+4. Remove the temporary local repository you created earlier.
+```sh
+$ cd ..
+$ rm -rf old-repository
+```
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
